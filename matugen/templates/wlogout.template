@@ -1,0 +1,40 @@
+window {
+    background-color: {{ colors.primary_container.default.hex | set_lightness: 20.0}};
+}
+
+button {
+    background-color: {{ colors.secondary.default.hex | set_lightness: 40.0 }};
+    color: {{ colors.on_secondary.default.hex | set_lightness: 100.0 }};
+    border-radius: 16px;
+    border: 2px solid rgba(255,255,255,0.05);
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: 25%;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+button:focus, button:hover {
+    background-color: {{colors.tertiary.dark.hex | set_lightness: 20.0 }};
+    color: {{colors.on_tertiary.dark.hex | set_lightness: 100.0 }};
+    border: 2px solid {{colors.tertiary_container.dark.hex}};
+}
+
+#lock {
+    background-image: url("/usr/share/wlogout/icons/lock.png");
+}
+#logout {
+    background-image: url("/usr/share/wlogout/icons/logout.png");
+}
+#hibernate {
+    background-image: url("/usr/share/wlogout/icons/hibernate.png");
+}
+#reboot {
+    background-image: url("/usr/share/wlogout/icons/reboot.png");
+}
+#shutdown {
+    background-image: url("/usr/share/wlogout/icons/shutdown.png");
+}
+#suspend {
+    background-image: url("/usr/share/wlogout/icons/suspend.png");
+}

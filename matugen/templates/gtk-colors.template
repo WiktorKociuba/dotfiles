@@ -1,0 +1,44 @@
+/* Override adw-gtk3 core colors with Matugen */
+@define-color accent_color #{{colors.secondary.default.hex_stripped}};
+@define-color accent_bg_color #{{colors.secondary.default.hex_stripped}};
+@define-color accent_fg_color #{{colors.on_secondary.default.hex_stripped}};
+
+@define-color window_bg_color alpha(#{{colors.primary_container.default.hex_stripped}}, 0.85);
+@define-color window_fg_color #{{colors.on_primary_container.default.hex_stripped}};
+
+@define-color view_bg_color alpha(#{{colors.primary_container.default.hex_stripped}}, 0.85);
+@define-color view_fg_color #{{colors.on_primary_container.default.hex_stripped}};
+
+@define-color headerbar_bg_color alpha(#{{colors.surface.default.hex_stripped}}, 0.85);
+@define-color headerbar_fg_color #{{colors.on_surface.default.hex_stripped}};
+
+@define-color popover_bg_color alpha(#{{colors.surface_container.default.hex_stripped}}, 0.95);
+@define-color card_bg_color alpha(#{{colors.surface_variant.default.hex_stripped}}, 0.85);
+
+/* Force Thunar to drop its solid background layers so the transparency works */
+window.thunar, 
+window.thunar > box, 
+window.thunar paned, 
+window.thunar scrolledwindow,
+.thunar .sidebar, 
+.thunar .view, 
+.thunar grid {
+    background-color: @window_bg_color;
+    background-image: none;
+}
+window.thunar headerbar {
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-shadow: none;
+    background: @window_bg_color;
+}
+
+window.thunar headerbar * {
+    opacity: 0;
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+}

@@ -1,0 +1,44 @@
+/* Override adw-gtk3 core colors with Matugen */
+@define-color accent_color #c9c3dc;
+@define-color accent_bg_color #c9c3dc;
+@define-color accent_fg_color #312e41;
+
+@define-color window_bg_color alpha(#483f77, 0.85);
+@define-color window_fg_color #e6deff;
+
+@define-color view_bg_color alpha(#483f77, 0.85);
+@define-color view_fg_color #e6deff;
+
+@define-color headerbar_bg_color alpha(#141318, 0.85);
+@define-color headerbar_fg_color #e6e1e9;
+
+@define-color popover_bg_color alpha(#201f24, 0.95);
+@define-color card_bg_color alpha(#48454e, 0.85);
+
+/* Force Thunar to drop its solid background layers so the transparency works */
+window.thunar, 
+window.thunar > box, 
+window.thunar paned, 
+window.thunar scrolledwindow,
+.thunar .sidebar, 
+.thunar .view, 
+.thunar grid {
+    background-color: @window_bg_color;
+    background-image: none;
+}
+window.thunar headerbar {
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-shadow: none;
+    background: @window_bg_color;
+}
+
+window.thunar headerbar * {
+    opacity: 0;
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+}

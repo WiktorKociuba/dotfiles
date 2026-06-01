@@ -1,0 +1,11 @@
+* {
+    /* Matugen injected colors */
+    background: {{colors.primary_container.default.hex}}c6;
+    background-alt: {{colors.primary_container.default.hex}};
+    foreground: {{colors.on_primary_container.default.hex}};
+    selected: {{colors.primary.default.hex}};
+    selected-text: {{colors.on_primary.default.hex}};
+    border-color: {{colors.outline.default.hex}};
+    urgent: {{colors.error.default.hex}};
+    secondary: {{colors.on_primary.default.hex}}e1;
+}

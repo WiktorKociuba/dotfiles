@@ -1,0 +1,11 @@
+* {
+    /* Matugen injected colors */
+    background: #483f77c6;
+    background-alt: #483f77;
+    foreground: #e6deff;
+    selected: #cabeff;
+    selected-text: #32285f;
+    border-color: #938f99;
+    urgent: #ffb4ab;
+    secondary: #32285fe1;
+}

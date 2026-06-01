@@ -1,0 +1,34 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "margin": "0 0 0 0",
+  "reload_style_on_change": true,
+
+  // We group modules for better organisation
+  "group/gleft1": {
+    "orientation": "horizontal",
+    "modules": ["battery", "cpu", "backlight"],
+  },
+
+  "group/gleft2": {
+    "orientation": "horizontal",
+    "modules": ["niri/workspaces", "mpris"],
+  },
+
+  "group/gright1": {
+    "orientation": "horizontal",
+    "modules": ["memory", "temperature", "tray"],
+  },
+
+  "group/gright2": {
+    "orientation": "horizontal",
+    "modules": ["custom/cava","wireplumber", "bluetooth", "network"],
+  },
+
+  "modules-left": ["custom/archicon","custom/boykisser", "power-profiles-daemon", "group/gleft1", "group/gleft2"],
+  "modules-center": ["clock"],
+  "modules-right": ["group/gright2", "group/gright1"],
+
+  // We need to include our modules to use them here.
+  "include": ["~/.config/waybar/modules.jsonc"],
+}

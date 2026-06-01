@@ -1,0 +1,48 @@
+[config.reload_apps]
+waybar = true
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar-colors.css"
+output_path = "~/.config/waybar/css/colors.css"
+post_hook = "killall -SIGUSR2 waybar"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.css"
+output_path = "~/.config/kitty/colors.conf"
+post_hook = "killall -SIGUSR1 kitty"
+
+[templates.niri]
+input_path = "~/.config/matugen/templates/niri-config.template"
+output_path = "~/.config/niri/config.kdl"
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk-colors.template"
+output_path = "~/.config/gtk-3.0/gtk.css"
+
+[templates.zen]
+input_path = "~/.config/matugen/templates/zen-colors.template"
+output_path = "~/.zen/86srr0rh.rice/chrome/colors.css"
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi-colors.template"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.vscode-raw]
+input_path = './templates/vscode-colors'
+output_path = '~/.cache/matugen/vscode-colors'
+
+[templates.vscode-json]
+input_path = './templates/vscode-colors.json'
+output_path = '~/.cache/matugen/vscode-colors.json'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/obsidian.template'
+output_path = '~/Documents/Obsidian Vault/.obsidian/themes/matugen-colors.css'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/wlogout.template'
+output_path = '~/.config/wlogout/style.css'
+
+[templates.wleave]
+input_path = '~/.config/matugen/templates/wlogout.template'
+output_path = '~/.config/wleave/style.css'

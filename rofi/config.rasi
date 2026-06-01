@@ -1,0 +1,87 @@
+@import "colors.rasi"
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width: 600px;
+    border: 2px solid;
+    border-color: @border-color;
+    border-radius: 12px;
+    background-color: @background;
+    padding: 10px;
+}
+
+mainbox {
+    spacing: 10px;
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 10px;
+    background-color: @background-alt;
+    border-radius: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @foreground;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: @foreground;
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    background-color: transparent;
+    border: 0px;
+}
+
+element {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element normal.normal{
+    background-color: transparent;
+    text-color: @foreground;
+}
+element alternate.normal {
+    background-color: @secondary;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @selected-text;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+    background-color: inherit;
+}
